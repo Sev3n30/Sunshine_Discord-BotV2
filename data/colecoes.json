@@ -1,0 +1,68 @@
+{
+  "677165577017622529": {
+    "cartas": [
+      {
+        "nome": "A Roda da Fortuna",
+        "mensagem": "O destino gira ao seu favor inesperadamente.",
+        "raridade": "epica",
+        "emoji": "🎡"
+      },
+      {
+        "nome": "A Imperatriz",
+        "mensagem": "Crescimento emocional e criatividade.",
+        "raridade": "rara",
+        "emoji": "🌸"
+      },
+      {
+        "nome": "A Força",
+        "mensagem": "Controle suas emoções hoje.",
+        "raridade": "comum",
+        "emoji": "🦁"
+      },
+      {
+        "nome": "A Força",
+        "mensagem": "Sua paciência será recompensada.",
+        "raridade": "rara",
+        "emoji": "🦁"
+      },
+      {
+        "nome": "A Morte",
+        "mensagem": "Uma transformação profunda mudará seu destino.",
+        "raridade": "lendaria",
+        "emoji": "💀"
+      },
+      {
+        "nome": "O Tolo",
+        "mensagem": "Arrisque-se mais hoje, algo bom pode acontecer.",
+        "raridade": "comum",
+        "emoji": "🎒"
+      }
+    ],
+    "xp": 23,
+    "nivel": 1
+  },
+  "321737913094373390": {
+    "cartas": [
+      {
+        "nome": "O Eremita",
+        "mensagem": "Um tempo sozinho pode ser necessário.",
+        "raridade": "comum",
+        "emoji": "🕯"
+      }
+    ],
+    "xp": 1,
+    "nivel": 0
+  },
+  "1467153002988310661": {
+    "cartas": [
+      {
+        "nome": "A Sacerdotisa",
+        "mensagem": "Confie mais na sua intuição.",
+        "raridade": "rara",
+        "emoji": "🌙"
+      }
+    ],
+    "xp": 3,
+    "nivel": 0
+  }
+}
