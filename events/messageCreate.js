@@ -3,6 +3,16 @@ module.exports = {
 
     async execute(message, client) {
 
+        const diceRegex = /^!\d+#?d\d+$/i
+
+        if (diceRegex.test(message.content)){
+            const comando = client.prefixCommands.get("dado")
+
+            if(comando){
+                return comando.execute(message)
+            }
+        }
+
         const prefix = "!";
 
         if (message.author.bot) return;
