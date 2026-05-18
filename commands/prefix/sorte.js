@@ -1,5 +1,7 @@
 const {EmbedBuilder} = require ("discord.js")
 
+const {carregarStats, salvarStats} = require("../../systems/stats.js")
+
 const {carregarColecoes, salvarColecoes} = require("../../data/colecoes")
 const usos = new Map()
 
@@ -8,17 +10,21 @@ let colecoes = carregarColecoes()
 function sortearRaridade(){
     const numero = Math.random()*100
     if (numero < 50) return "comum"
-    if (numero < 80) return "rara"
-    if (numero < 95) return "epica"
-    return "lendaria"
+    if (numero < 75) return "rara"
+    if (numero < 90) return "epica"
+    if (numero < 97) return "lendaria"
+    if (numero < 99.7) return "transcendente"
+    return "god"
 }
 
 function obterCor(raridade){
     switch (raridade){
-        case "comum": return 0x808080
-        case "rara": return 0x3498db
-        case "epica": return 0x9b59b6
-        case "lendaria": return 0xf1c40f
+        case "comum": return 0x95a5a6 
+        case "rara": return 0x3498db 
+        case "epica": return 0x9b59b6 
+        case "lendaria": return 0xf1c40f 
+        case "transcendente": return 0xe67e22  
+        case "god": return 0xff0055  
     }
 }
 
@@ -26,61 +32,29 @@ function calcularXp(raridade){
     switch(raridade){
         case "comum": return 1
         case "rara": return 3
-        case "epica": return 5
-        case "lendaria": return 10
+        case "epica": return 6
+        case "lendaria": return 12
+        case "transcendente": return 25
+        case "god": return 100
     }
 }
 
 const niveis = [
-    {nivel: 1, nome: "Alquimista", xp:10},
-    {nivel: 2, nome: "Mago", xp:25},
-    {nivel: 3, nome: "Arcano", xp:50},
-    {nivel:4, nome: "Lenda Viva", xp:100}
+    { nivel: 1, nome: "Aprendiz do Caos", xp: 20 },
+    { nivel: 2, nome: "Manipulador", xp: 40 },
+    { nivel: 3, nome: "Arquiteto", xp: 80 },
+    { nivel: 4, nome: "Mestre das Apostas", xp: 100 },
+    { nivel: 5, nome: "Observador do Destino", xp: 120 },
+    { nivel: 6, nome: "Imperador do Acaso", xp: 160 },
+    { nivel: 7, nome: "Entidade da Ruína", xp: 250 },
+    { nivel: 8, nome: "The Fool", xp: 500 }
 ]
 
-const cartas = [
-    // 🔹 LENDÁRIAS (3)
-    { nome: "O Sol", mensagem: "Uma fase extremamente iluminada começa agora.", raridade: "lendaria", emoji: "🌞" },
-    { nome: "A Estrela", mensagem: "Um desejo antigo está prestes a se realizar.", raridade: "lendaria", emoji: "⭐" },
-    { nome: "A Morte", mensagem: "Uma transformação profunda mudará seu destino.", raridade: "lendaria", emoji: "💀" },
-
-    // 🔸 ÉPICAS (5)
-    { nome: "Os Enamorados", mensagem: "Uma conexão intensa marcará seu caminho.", raridade: "epica", emoji: "💞" },
-    { nome: "O Mago", mensagem: "Você descobrirá um talento oculto muito em breve.", raridade: "epica", emoji: "🪄" },
-    { nome: "A Roda da Fortuna", mensagem: "O destino gira ao seu favor inesperadamente.", raridade: "epica", emoji: "🎡" },
-    { nome: "O Imperador", mensagem: "Você assumirá controle de uma situação importante.", raridade: "epica", emoji: "👑" },
-    { nome: "A Justiça", mensagem: "Algo que parecia injusto será equilibrado.", raridade: "epica", emoji: "⚖" },
-
-    // 🔹 RARAS (7)
-    { nome: "O Carro", mensagem: "Vitória através da determinação.", raridade: "rara", emoji: "🏇" },
-    { nome: "A Força", mensagem: "Sua paciência será recompensada.", raridade: "rara", emoji: "🦁" },
-    { nome: "O Eremita", mensagem: "Um momento de reflexão trará respostas.", raridade: "rara", emoji: "🕯" },
-    { nome: "O Enforcado", mensagem: "Você verá algo sob uma nova perspectiva.", raridade: "rara", emoji: "🔄" },
-    { nome: "A Sacerdotisa", mensagem: "Confie mais na sua intuição.", raridade: "rara", emoji: "🌙" },
-    { nome: "A Imperatriz", mensagem: "Crescimento emocional e criatividade.", raridade: "rara", emoji: "🌸" },
-    { nome: "O Imperador", mensagem: "Disciplina será essencial hoje.", raridade: "rara", emoji: "🏛" },
-
-    // ⚪ COMUNS (15)
-    { nome: "O Tolo", mensagem: "Novos começos surgem em seu horizonte.", raridade: "comum", emoji: "🎒" },
-    { nome: "O Tolo", mensagem: "Arrisque-se mais hoje, algo bom pode acontecer.", raridade: "comum", emoji: "🎒" },
-    { nome: "O Mago", mensagem: "Use suas habilidades com sabedoria.", raridade: "comum", emoji: "🪄" },
-    { nome: "Os Enamorados", mensagem: "Boas energias no campo emocional.", raridade: "comum", emoji: "💞" },
-    { nome: "A Lua", mensagem: "Nem tudo é o que parece.", raridade: "comum", emoji: "🌙" },
-    { nome: "A Lua", mensagem: "Escute seus sentimentos antes de agir.", raridade: "comum", emoji: "🌙" },
-    { nome: "A Justiça", mensagem: "Pequenos ajustes trarão equilíbrio.", raridade: "comum", emoji: "⚖" },
-    { nome: "O Carro", mensagem: "Continue avançando, mesmo devagar.", raridade: "comum", emoji: "🏇" },
-    { nome: "A Imperatriz", mensagem: "Um momento leve e produtivo se aproxima.", raridade: "comum", emoji: "🌸" },
-    { nome: "O Eremita", mensagem: "Um tempo sozinho pode ser necessário.", raridade: "comum", emoji: "🕯" },
-    { nome: "A Força", mensagem: "Controle suas emoções hoje.", raridade: "comum", emoji: "🦁" },
-    { nome: "O Enforcado", mensagem: "Espere antes de tomar decisões.", raridade: "comum", emoji: "🔄" },
-    { nome: "A Sacerdotisa", mensagem: "Observe mais, fale menos.", raridade: "comum", emoji: "🌙" },
-    { nome: "A Roda da Fortuna", mensagem: "Mudanças pequenas estão a caminho.", raridade: "comum", emoji: "🎡" },
-    { nome: "A Morte", mensagem: "Algo pequeno chega ao fim para algo novo começar.", raridade: "comum", emoji: "💀" }
-]
+const cartas = require("../../data/tarotCards.json")
 
 module.exports = {
     name: "sorte",
-    aliases: ["horoscopo", "bungas"],
+    aliases: ["horoscopo", "futuro"],
 
     async execute(message){
         const userId = message.author.id
@@ -104,6 +78,28 @@ module.exports = {
             }
         }
         const xpGanho = calcularXp(raridade)
+
+        const stats = carregarStats()
+
+        if(!stats[userId]){
+            stats[userId] = {
+                mensagens: 0,
+                dadosRolados: 0,
+                moedasJogadas: 0,
+                tempoCall: 0,
+                cartasRaras: 0,
+                desafiosGanhos: 0
+            }
+        }
+        if(
+            carta.raridade == "lendaria" ||
+            carta.raridade == "transcendente" ||
+            carta.raridade == "god"
+        ){
+            stats[userId].cartasRaras++
+        }
+
+        salvarStats(stats)
 
         colecoes[userId].cartas.push(carta)
         colecoes[userId].xp += xpGanho

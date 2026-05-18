@@ -1,4 +1,5 @@
 const { EmbedBuilder } = require("discord.js")
+const { carregarStats, salvarStats } = require("../../systems/stats")
 
 module.exports = {
     name: "moeda", 
@@ -12,6 +13,24 @@ module.exports = {
             .setThumbnail("https://cdn.pixabay.com/animation/2025/06/03/03/30/03-30-33-674_512.gif")
             .setColor(0xffd700)
             .setTimestamp()
+
+        const stats = carregarStats()
+        const userId = message.author.id
+
+        if(!stats[userId]){
+            stats[userId] = {
+                mensagens: 0,
+                dadosRolados: 0,
+                moedasJogadas: 0,
+                tempoCall: 0,
+                cartasRaras: 0,
+                desafiosGanhos: 0
+            }
+        }
+
+        stats[userId].moedasJogadas++
+
+        salvarStats(stats)
 
         message.reply({embeds: [embed]})
     }

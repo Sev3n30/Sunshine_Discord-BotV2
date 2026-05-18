@@ -2,10 +2,14 @@ const { carregarColecoes } = require("../../data/colecoes")
 const { EmbedBuilder } = require("discord.js");
 
 const niveis = [
-    { nivel: 1, nome: "Alquimista", xp: 10 },
-    { nivel: 2, nome: "Mago", xp: 25 },
-    { nivel: 3, nome: "Arcano", xp: 50 },
-    { nivel: 4, nome: "Lenda Viva", xp: 100 }
+    { nivel: 1, nome: "Aprendiz do Caos", xp: 20 },
+    { nivel: 2, nome: "Manipulador", xp: 40 },
+    { nivel: 3, nome: "Arquiteto", xp: 80 },
+    { nivel: 4, nome: "Mestre das Apostas", xp: 100 },
+    { nivel: 5, nome: "Observador do Destino", xp: 120 },
+    { nivel: 6, nome: "Imperador do Acaso", xp: 160 },
+    { nivel: 7, nome: "Entidade da Ruína", xp: 250 },
+    { nivel: 8, nome: "The Fool", xp: 500 }
 ]
 
 module.exports = {

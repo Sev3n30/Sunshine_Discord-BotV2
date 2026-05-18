@@ -26,6 +26,6 @@ module.exports = {
 
         deletadas.size  
 
-        await interaction.reply({content: `${deletadas.size} mensagens removidas`, ephemeral: true})
+        await interaction.reply({content: `${deletadas.size} mensagens removidas`, flags: 64})
     }
 }

@@ -1,7 +1,11 @@
+const {carregarStats, salvarStats} = require("../../systems/stats.js")
+
 module.exports = {
     name: "messageCreate",
 
     async execute(message, client) {
+
+        //console.log(`${message.author.username} mandou mensagem`)
 
         const diceRegex = /^!\d+#?d\d+$/i
 
@@ -16,6 +20,25 @@ module.exports = {
         const prefix = "!";
 
         if (message.author.bot) return;
+
+        const stats = carregarStats();
+        const userId = message.author.id;
+
+        if(!stats[userId]){
+            stats[userId] = {
+                mensagens: 0,
+                dadosRolados: 0,
+                moedasJogadas: 0,
+                tempoCall: 0,
+                cartasRaras: 0,
+                desafiosGanhos: 0
+            }
+        }
+
+        stats[userId].mensagens++;
+
+        salvarStats(stats)
+
         if (!message.content.startsWith(prefix)) return;
 
         const args = message.content.slice(prefix.length).trim().split(/ +/);

@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = (client) => {
 
-    const eventsPath = path.join(__dirname, "..", "events");
+    const eventsPath = path.join(__dirname, "..", "events", "client");
     const eventFiles = fs.readdirSync(eventsPath).filter(f => f.endsWith(".js"));
 
     for (const file of eventFiles) {
@@ -17,6 +17,6 @@ module.exports = (client) => {
             client.on(event.name, (...args) => event.execute(...args, client));
         }
     }
-
+    
     console.log("Events carregados.");
 };

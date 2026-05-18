@@ -1,0 +1,253 @@
+[
+  {
+    "nome": "The Fool",
+    "mensagem": "A realidade sorriu para você hoje... e isso raramente é algo bom.",
+    "raridade": "god",
+    "emoji": "🃏"
+  },
+  {
+    "nome": "O Cassino Celestial",
+    "mensagem": "Nem mesmo as estrelas entendem as regras desta mesa.",
+    "raridade": "god",
+    "emoji": "🎰"
+  },
+
+  {
+    "nome": "O Sol Artificial",
+    "mensagem": "Uma presença impossível ilumina caminhos proibidos.",
+    "raridade": "transcendente",
+    "emoji": "☀️"
+  },
+  {
+    "nome": "A Última Aposta",
+    "mensagem": "Tudo pode ser perdido... exatamente por isso vale a pena jogar.",
+    "raridade": "transcendente",
+    "emoji": "🎲"
+  },
+  {
+    "nome": "O Rei Sem Coroa",
+    "mensagem": "Mesmo sem trono, alguns homens dominam o mundo inteiro.",
+    "raridade": "transcendente",
+    "emoji": "👑"
+  },
+  {
+    "nome": "A Ruptura",
+    "mensagem": "As regras começaram a falhar ao seu redor.",
+    "raridade": "transcendente",
+    "emoji": "🕳️"
+  },
+
+  {
+    "nome": "O Sol",
+    "mensagem": "Hoje o universo parece conspirar ao seu favor.",
+    "raridade": "lendaria",
+    "emoji": "🌞"
+  },
+  {
+    "nome": "A Estrela Dourada",
+    "mensagem": "Mesmo em meio ao caos, sua luz continua visível.",
+    "raridade": "lendaria",
+    "emoji": "⭐"
+  },
+  {
+    "nome": "O Imperador Invisível",
+    "mensagem": "Influência verdadeira não precisa ser anunciada.",
+    "raridade": "lendaria",
+    "emoji": "🏛️"
+  },
+  {
+    "nome": "A Máscara",
+    "mensagem": "Nem todo sorriso revela intenções reais.",
+    "raridade": "lendaria",
+    "emoji": "🎭"
+  },
+  {
+    "nome": "A Tempestade",
+    "mensagem": "Grandes mudanças se aproximam rapidamente.",
+    "raridade": "lendaria",
+    "emoji": "⛈️"
+  },
+
+  {
+    "nome": "O Mago",
+    "mensagem": "Suas habilidades podem mudar mais coisas do que imagina.",
+    "raridade": "epica",
+    "emoji": "🪄"
+  },
+  {
+    "nome": "A Lua",
+    "mensagem": "Algumas verdades preferem existir escondidas.",
+    "raridade": "epica",
+    "emoji": "🌙"
+  },
+  {
+    "nome": "A Roda",
+    "mensagem": "A sorte gira rápido para quem continua jogando.",
+    "raridade": "epica",
+    "emoji": "🎡"
+  },
+  {
+    "nome": "O Relógio",
+    "mensagem": "O tempo sempre cobra seu preço.",
+    "raridade": "epica",
+    "emoji": "🕰️"
+  },
+  {
+    "nome": "A Sacerdotisa",
+    "mensagem": "Sua intuição percebeu algo antes da sua mente.",
+    "raridade": "epica",
+    "emoji": "🔮"
+  },
+  {
+    "nome": "O Coringa",
+    "mensagem": "O imprevisível pode ser sua maior vantagem hoje.",
+    "raridade": "epica",
+    "emoji": "🃏"
+  },
+  {
+    "nome": "Os Dados",
+    "mensagem": "Arriscar-se talvez seja melhor do que permanecer parado.",
+    "raridade": "epica",
+    "emoji": "🎲"
+  },
+
+  {
+    "nome": "O Eremita",
+    "mensagem": "Um pouco de silêncio pode revelar respostas úteis.",
+    "raridade": "rara",
+    "emoji": "🕯️"
+  },
+  {
+    "nome": "A Chuva",
+    "mensagem": "Nem toda melancolia é algo ruim.",
+    "raridade": "rara",
+    "emoji": "🌧️"
+  },
+  {
+    "nome": "O Gato Preto",
+    "mensagem": "Curiosidade excessiva pode abrir portas inesperadas.",
+    "raridade": "rara",
+    "emoji": "🐈"
+  },
+  {
+    "nome": "A Ponte",
+    "mensagem": "Uma conexão importante está prestes a surgir.",
+    "raridade": "rara",
+    "emoji": "🌉"
+  },
+  {
+    "nome": "O Espelho",
+    "mensagem": "Talvez você esteja ignorando partes importantes de si mesmo.",
+    "raridade": "rara",
+    "emoji": "🪞"
+  },
+  {
+    "nome": "A Fumaça",
+    "mensagem": "Nem tudo ao seu redor é tão sólido quanto parece.",
+    "raridade": "rara",
+    "emoji": "💨"
+  },
+  {
+    "nome": "A Biblioteca",
+    "mensagem": "Conhecimento inútil hoje pode salvar você amanhã.",
+    "raridade": "rara",
+    "emoji": "📚"
+  },
+  {
+    "nome": "O Maestro",
+    "mensagem": "Até o caos possui ritmo quando observado corretamente.",
+    "raridade": "rara",
+    "emoji": "🎼"
+  },
+
+  {
+    "nome": "O Tolo",
+    "mensagem": "Às vezes começar sem plano ainda é melhor do que não começar.",
+    "raridade": "comum",
+    "emoji": "🎒"
+  },
+  {
+    "nome": "A Moeda",
+    "mensagem": "Pequenas escolhas moldam grandes consequências.",
+    "raridade": "comum",
+    "emoji": "🪙"
+  },
+  {
+    "nome": "O Café",
+    "mensagem": "Talvez tudo o que você precise hoje seja um pequeno descanso.",
+    "raridade": "comum",
+    "emoji": "☕"
+  },
+  {
+    "nome": "A Janela",
+    "mensagem": "Observe mais o mundo ao seu redor.",
+    "raridade": "comum",
+    "emoji": "🪟"
+  },
+  {
+    "nome": "O Caminho",
+    "mensagem": "Continuar avançando ainda é avanço.",
+    "raridade": "comum",
+    "emoji": "🛤️"
+  },
+  {
+    "nome": "A Rosa",
+    "mensagem": "Beleza e perigo frequentemente coexistem.",
+    "raridade": "comum",
+    "emoji": "🌹"
+  },
+  {
+    "nome": "A Pena",
+    "mensagem": "Palavras podem carregar mais peso do que espadas.",
+    "raridade": "comum",
+    "emoji": "🪶"
+  },
+  {
+    "nome": "A Vela",
+    "mensagem": "Mesmo pequenas luzes afastam a escuridão.",
+    "raridade": "comum",
+    "emoji": "🕯️"
+  },
+  {
+    "nome": "O Trem",
+    "mensagem": "Algumas oportunidades não esperam por ninguém.",
+    "raridade": "comum",
+    "emoji": "🚂"
+  },
+  {
+    "nome": "O Violino",
+    "mensagem": "Momentos tranquilos também possuem valor.",
+    "raridade": "comum",
+    "emoji": "🎻"
+  },
+  {
+    "nome": "A Chave",
+    "mensagem": "Você já possui a resposta para algo importante.",
+    "raridade": "comum",
+    "emoji": "🗝️"
+  },
+  {
+    "nome": "A Escadaria",
+    "mensagem": "Grandes resultados surgem degrau por degrau.",
+    "raridade": "comum",
+    "emoji": "🪜"
+  },
+  {
+    "nome": "A Névoa",
+    "mensagem": "Nem toda confusão dura para sempre.",
+    "raridade": "comum",
+    "emoji": "🌫️"
+  },
+  {
+    "nome": "O Bilhete",
+    "mensagem": "Uma mensagem inesperada pode mudar seu dia.",
+    "raridade": "comum",
+    "emoji": "✉️"
+  },
+  {
+    "nome": "O Guarda-Chuva",
+    "mensagem": "Prevenção ainda é melhor do que arrependimento.",
+    "raridade": "comum",
+    "emoji": "☂️"
+  }
+]

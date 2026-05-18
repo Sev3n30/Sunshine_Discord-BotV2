@@ -1,3 +1,5 @@
+const {carregarStats, salvarStats} = require("../../systems/stats.js")
+
 module.exports = {
     name: "dado",
 
@@ -20,6 +22,24 @@ module.exports = {
         for (let i = 0; i < quantidade; i++){
             resultados.push(Math.floor(Math.random()* lados)+ 1)
         }
+
+        const stats = carregarStats()
+        const userId = message.author.id
+
+        if(!stats[userId]){
+            stats[userId] = {
+                mensagens: 0,
+                dadosRolados: 0,
+                moedasJogadas: 0,
+                tempoCall: 0,
+                cartasRaras: 0,
+                desafiosGanhos: 0
+            }
+        }
+
+        stats[userId].dadosRolados++
+
+        salvarStats(stats)
 
         if (separar){
             return message.reply(`Resultados: \n ${resultados.join("\n")}`)
